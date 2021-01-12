@@ -1,0 +1,92 @@
+@import "src/scss/settings/colors";
+
+.main-frame {
+  display: flex;
+}
+.img-container {
+  width: 50vw;
+  height: 962px;
+  background-image: url("/assets/Home-Hero-Image.jpg");
+  box-sizing: border-box;
+}
+.content-container {
+  width: 50vw;
+  height: 962px;
+  display: flex;
+  flex-direction: column;
+}
+.logging-list {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding: 5px;
+}
+.logging-link {
+  padding: 5px 15px;
+  color: $color-lightgray;
+  :link {
+    text-decoration: none;
+    cursor: pointer;
+
+  }
+  :hover {
+    border: 2px solid $color-orange;
+
+  }
+}
+.routing-line {
+  display: flex;
+  justify-content: flex-end;
+}
+.routing-button {
+  border: none;
+  background: transparent;
+  padding: 10px 20px;
+  font-size: 23px;
+  color: $color-darkgray;
+  :hover {
+    border: 2px solid $color-orange;
+    cursor: pointer;
+  }
+}
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+}
+.main-text {
+  text-align: center;
+  color: $color-darkgray;
+  font-size: 40px;
+  margin: 10px;
+}
+.interline-img {
+  width: 253px;
+  height: 33px;
+  background-image: url("/assets/Decoration.svg");
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.big-buttons {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 30px;
+  li {
+    width: 310px;
+    height: 120px;
+    padding: 28px 70px;
+    margin: 0 20px;
+    border: 2px solid $color-darkgray;
+    font-size: 30px;
+    text-align: center;
+    color: $color-darkgray;
+  }
+  :link {
+    text-decoration: none;
+    cursor: pointer;
+
+  }
+}

@@ -1,0 +1,31 @@
+@import "src/scss/settings/colors";
+.main-container {
+  display: flex;
+  background: $color-orange;
+}
+.column-container {
+  width: 334px;
+  height: 252px;
+  display: flex;
+  margin: 46px 143px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.count {
+  font-size: 90px;
+  margin: 10px;
+  color: $color-darkgray;
+}
+.column-title {
+  font-size: 18px;
+  margin: 10px;
+  color: $color-darkgray;
+}
+.column-description {
+  font-size: 16px;
+  color: $color-darkgray;
+  text-align: center;
+  margin: 10px;
+  line-height: 22px;
+}

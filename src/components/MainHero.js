@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-
 const MainHero = () => {
     return (
         <div className="main-frame">
@@ -8,8 +7,8 @@ const MainHero = () => {
             <div className="content-container">
                 <nav className="logging-line">
                     <ul className="logging-list">
-                        <li><Link to="/logowanie">Zaloguj</Link></li>
-                        <li><Link to="/rejestracja">Załóż konto</Link></li>
+                        <li className="logging-link"><Link to="/logowanie">Zaloguj</Link></li>
+                        <li className="logging-link"><Link to="/rejestracja">Załóż konto</Link></li>
                     </ul>
                 </nav>
                 <div className="routing-line">

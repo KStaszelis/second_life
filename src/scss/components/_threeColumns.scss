@@ -2,6 +2,7 @@
 .main-container {
   display: flex;
   background: $color-orange;
+  justify-content: center;
 }
 .column-container {
   width: 334px;
@@ -16,11 +17,13 @@
   font-size: 90px;
   margin: 10px;
   color: $color-darkgray;
+  font-weight: 100;
 }
 .column-title {
   font-size: 18px;
   margin: 10px;
   color: $color-darkgray;
+  font-weight: 100;
 }
 .column-description {
   font-size: 16px;

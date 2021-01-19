@@ -1,0 +1,25 @@
+@import "src/scss/settings/colors";
+.who-help-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.who-help-title {
+  font-size: 36px;
+  font-weight: 100;
+  margin-top: 40px;
+}
+.who-help-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  margin: 5px 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.who-help-description {
+  font-size: 22px;
+  text-align: center;
+  margin: 20px 0;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 const ThreeColumns = () => {
     return (
-        <div className="main-container">
+        <div className="main-container" id='threeCol'>
             <div className="column-container">
                 <h2 className="count">10</h2>
                 <h3 className="column-title">ODDANYCH WORKÓW</h3>

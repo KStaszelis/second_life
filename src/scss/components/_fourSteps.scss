@@ -1,0 +1,84 @@
+@import "src/scss/settings/colors";
+.four-steps-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.four-steps-title {
+  font-size: 38px;
+  font-weight: 100;
+  margin-top: 40px;
+}
+//interline-img ostylowany w _mainHero.scss - może przenieść do settings?
+
+.four-steps-internal-container {
+  width: 100%;
+  height: 325px;
+  background-color: #F0F1F1;
+  display: flex;
+  justify-content: space-around;
+}
+.step-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 50px;
+}
+.step-img-1 {
+  background-image: url("/assets/Icon-1.svg");
+  width: 83px;
+  height: 83px;
+  margin-bottom: 20px;
+}
+.step-img-2 {
+  background-image: url("/assets/Icon-2.svg");
+  width: 83px;
+  height: 83px;
+  margin-bottom: 20px;
+}
+.step-img-3 {
+  background-image: url("/assets/Icon-3.svg");
+  width: 83px;
+  height: 83px;
+
+}
+.step-img-4 {
+  background-image: url("/assets/Icon-4.svg");
+  width: 83px;
+  height: 83px;
+  margin-bottom: 20px;
+}
+.step-txt {
+  font-size: 18px;
+  font-weight: 100;
+  padding: 0 20px;
+}
+.step-description {
+  font-size: 16px;
+  font-weight: 100;
+}
+.step-description-line {
+  margin-bottom: 10px;
+ }
+.step-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 310px;
+  height: 120px;
+  padding: 5px 15px;
+  margin: 30px 0;
+  color: $color-lightgray;
+  border: 2px solid $color-darkgray;
+  a {
+    color: $color-lightgray;
+    &:link {
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 36px;
+      text-align: center;
+    }
+  }
+}

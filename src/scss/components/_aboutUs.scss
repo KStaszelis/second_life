@@ -1,0 +1,39 @@
+@import "src/scss/settings/colors";
+.aboutUs-main-container {
+ display: flex;
+}
+.aboutUs-internal-container {
+  width: 50%;
+  height: 935px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F1F1;
+}
+.aboutUs-title {
+  font-size: 38px;
+  font-weight: 100;
+}
+.aboutUs-text {
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+}
+.signature-container {
+  width: 70%;
+  height: 149px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+.signature-img {
+  height: 149px;
+  width: 209px;
+  background-image: url("/assets/Signature.svg");
+}
+.aboutUs-main-picture {
+  width: 50%;
+  height: 935px;
+  background-image: url("/assets/People.jpg");
+}

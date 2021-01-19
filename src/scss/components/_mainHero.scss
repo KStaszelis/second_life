@@ -25,14 +25,17 @@
 .logging-link {
   padding: 5px 15px;
   color: $color-lightgray;
-  :link {
-    text-decoration: none;
-    cursor: pointer;
+  a {
+    color: $color-lightgray;
+    border: 2px solid transparent;
+    &:hover {
+      border-color: $color-orange;
+    }
+    &:link {
+      text-decoration: none;
+      cursor: pointer;
 
-  }
-  :hover {
-    border: 2px solid $color-orange;
-
+    }
   }
 }
 .routing-line {
@@ -45,9 +48,18 @@
   padding: 10px 20px;
   font-size: 23px;
   color: $color-darkgray;
-  :hover {
-    border: 2px solid $color-orange;
-    cursor: pointer;
+  a {
+    color: $color-lightgray;
+    border: 2px solid transparent;
+
+    &:hover {
+      border-color: $color-darkgray;
+    }
+
+    &:link {
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }
 .main-section {
@@ -61,6 +73,7 @@
   color: $color-darkgray;
   font-size: 40px;
   margin: 10px;
+  font-weight: 100;
 }
 .interline-img {
   width: 253px;
@@ -82,11 +95,11 @@
     border: 2px solid $color-darkgray;
     font-size: 30px;
     text-align: center;
-    color: $color-darkgray;
+
   }
   :link {
     text-decoration: none;
     cursor: pointer;
-
+    color: $color-darkgray;
   }
 }

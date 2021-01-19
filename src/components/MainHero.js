@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {Link as Scroll} from "react-scroll"
+import ThreeColumns from "./ThreeColumns";
 const MainHero = () => {
     return (
         <div className="main-frame">
@@ -12,11 +14,11 @@ const MainHero = () => {
                     </ul>
                 </nav>
                 <div className="routing-line">
-                    <button className="routing-button">Start</button>
-                    <button className="routing-button">O co chodzi?</button>
-                    <button className="routing-button">O nas</button>
-                    <button className="routing-button">Fundacja i organizacje</button>
-                    <button className="routing-button">Kontakt</button>
+                    <Scroll className="routing-button" to={'whoHelp'}>Start</Scroll>
+                    <Scroll className="routing-button" to={'threeCol'}>O co chodzi?</Scroll>
+                    <Scroll className="routing-button" to={'aboutUs'}>O nas</Scroll>
+                    <Scroll className="routing-button" to={'whoHelp'}>Fundacja i organizacje</Scroll>
+                    <Scroll className="routing-button" to={'contact'}>Kontakt</Scroll>
                 </div>
                 <div className="main-section">
                     <h1 className="main-text">Zacznij pomagać!</h1>

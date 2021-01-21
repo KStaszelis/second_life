@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import "firebase/firestore";
 const WhoHelp = () => {
     const [data, setData] = useState({
         fundacjom: {

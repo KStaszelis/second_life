@@ -1,37 +1,26 @@
-import React, {useState} from 'react';
-import "firebase/firestore";
+import React, {useState, useEffect, useContext} from 'react';
+import {FirebaseContext} from "./Firebase";
+
 const WhoHelp = () => {
-    const [data, setData] = useState({
-        fundacjom: {
-            desc: 'djfsdfjkdjskjfksd',
-            items: [
-                {
-                    header: 'fdfd',
-                    subHeader: 'fdffd',
-                    other: 'dsf'
-                }
-            ]
-        },
-        organizacjom: {
-            desc: 'djfsdfjkdjskjfksd',
-            items: [
-                {
-                    header: '22222222',
-                    subHeader: 'fdffd',
-                    other: 'dsf'
-                }
-            ]
-        }
-    })
-    const [current, setCurrent] = useState('fundacjom')
+    const firebase = useContext(FirebaseContext);
+    const fundRef = firebase.db.collection('fundacje').doc('1');
+    const [current, setCurrent] = useState(null)
+    const documentsCollection = (doc) => {
+        return {id: doc.id, ...doc.data()};
+    };
+    useEffect(() => {
+       fundRef.get().then(snapshot => console.log(snapshot))
+
+    }, []);
+
     const clickFund = () => {
-        setCurrent('fundacjom');
+   //     setCurrent(fundRef);
     }
     const clickOrg = () => {
-        setCurrent('organizacjom');
+     //   setCurrent(createOrgs);
     }
     const clickCollections = () => {
-        setCurrent(true);
+       // setCurrent(createLocalCollections);
     }
     return (
         <div id={"whoHelp"} className="who-help-main-container">
@@ -48,9 +37,9 @@ const WhoHelp = () => {
 
             <div className="foundations-list">
                 lista fundacji
-                {data[current].items.map(el => (
-                    <li>{el.header}</li>
-                ))}
+               {/*{data[current].items.map(el => (*/}
+               {/*     <li>{el.header}</li>*/}
+               {/* ))}*/}
             </div>
 
         </div>

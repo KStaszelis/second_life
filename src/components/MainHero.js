@@ -4,7 +4,8 @@ import {Link as Scroll} from "react-scroll"
 import ThreeColumns from "./ThreeColumns";
 import {AuthContext} from "../App";
 import { withFirebase } from './Firebase';
-import { withAuthorization } from "./Session";
+
+
 const MainHero = () => {
     const user = useContext(AuthContext);
     console.log(user)
@@ -43,6 +44,5 @@ const MainHero = () => {
         </div>
     )
 }
-const condition = authUser => ! ! authUser;
 
-export default withAuthorization(condition)(MainHero);
+export default MainHero;

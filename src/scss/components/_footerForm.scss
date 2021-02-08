@@ -1,0 +1,84 @@
+@import "../settings/colors";
+.contact-form {
+  max-width: 900px;
+
+}
+.center-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.line-contact {
+  width:200px;
+}
+input {
+  border:none;
+}
+textarea {
+  border: none;
+  resize: none;
+}
+.inputs-close {
+  display: flex;
+  justify-content: space-between;
+
+}
+.button-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+.inputs-column {
+  display: flex;
+  flex-direction: column;
+
+}
+.login-input {
+  font-size: 16px;
+  font-weight: bolder;
+}
+.label-contact {
+  font-size: 16px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+.box-contact {
+  justify-content: space-around;
+}
+.image-left-contact {
+  width: 50%;
+  height: 935px;
+  background: url("../../assets/Background-Contact-Form.jpg") no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+
+
+
+}
+
+.footer {
+  font-size: small;
+}
+.socialMedia {
+  display: flex;
+
+}
+.iconFb {
+  background: url("../../assets/Facebook.svg") no-repeat;
+  background-size: contain;
+  height: 14px;
+  width: 14px;
+
+
+}
+.iconInstagram {
+  background: url("../../assets/Instagram.svg") no-repeat;
+  background-size: contain;
+  height: 14px;
+  width: 14px;
+
+}
+.bold {
+  font-weight: bold;
+}

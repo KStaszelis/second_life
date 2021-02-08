@@ -1,6 +1,8 @@
 import app from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
+import "firebase/firestore";
+import firebase from "firebase";
 
 const firebaseConfig = {
     apiKey: "AIzaSyA1701azajT6PMDcYuL3ah2GGhemEaXGlM",
@@ -10,11 +12,12 @@ const firebaseConfig = {
     messagingSenderId: "139685353383",
     appId: "1:139685353383:web:713836498953c7cb858882"
 };
+
 class Firebase {
     constructor() {
         app.initializeApp(firebaseConfig);
         this.auth = app.auth();
-        this.db = app.database();
+        this.db = firebase.firestore();
     }
     doCreateUserWithEmailAndPassword = (email, password) =>
         this.auth.createUserWithEmailAndPassword(email, password);

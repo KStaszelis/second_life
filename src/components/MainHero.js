@@ -1,24 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
 import {Link as Scroll} from "react-scroll"
 import ThreeColumns from "./ThreeColumns";
-import {AuthContext} from "../App";
-import { withFirebase } from './Firebase';
-
-
 const MainHero = () => {
-    const user = useContext(AuthContext);
-    console.log(user)
-    const SignOut = ({ firebase }) => (firebase.doSignOut);
     return (
         <div className="main-frame">
             <div className="img-container"> </div>
             <div className="content-container">
                 <nav className="logging-line">
-
                     <ul className="logging-list">
-                        <li className="logging-link">Cześć {user && user?.email} !</li>
-                        <li className="logging-link">{user ?<button type="button" onClick={SignOut}><Link to="/wylogowanie">Wyloguj</Link></button>:<Link to="/logowanie">Zaloguj</Link>}</li>
+                        <li className="logging-link"><Link to="/logowanie">Zaloguj</Link></li>
                         <li className="logging-link"><Link to="/rejestracja">Załóż konto</Link></li>
                     </ul>
                 </nav>
@@ -44,5 +35,4 @@ const MainHero = () => {
         </div>
     )
 }
-
 export default MainHero;

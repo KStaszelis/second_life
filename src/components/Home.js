@@ -4,7 +4,6 @@ import ThreeColumns from "./ThreeColumns";
 import FourSteps from "./FourSteps";
 import AboutUs from "./AboutUs"
 import WhoHelp from "./WhoHelp";
-import FooterForm from "./FooterForm"
 const Home = () => {
     return (
         <>
@@ -13,7 +12,6 @@ const Home = () => {
         <FourSteps/>
         <AboutUs/>
         <WhoHelp/>
-        <FooterForm/>
         </>
     );
 };

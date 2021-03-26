@@ -1,47 +1,36 @@
-import React, {useState, useEffect, useContext} from 'react';
-import {FirebaseContext} from "./Firebase";
-
-const WhoHelp = (props) => {
-    const firebase = useContext(FirebaseContext);
-    const fundRef = firebase.db.collection('second_life').doc('fundacje');
-    const [datas, setDatas] = useState(
-        ["pusto "]
-    );
-    const [current, setCurrent] = useState("pusty")
-
-    useEffect(() => {
-
-        fundRef.get().then(snapshot => console.log(snapshot))
-
-    }, [setDatas]);
-
-    const clickFund = (props) => {
-        fundRef.get().then(function(doc) {
-            if (doc.exists) {
-                const setDataUpload = [doc.data()];
-                console.log("Document data:", doc.data());
-                console.log(setDataUpload);
-                setDatas(setDataUpload);
-                console.log(datas)
-            } else {
-                // doc.data() will be undefined in this case
-                console.log("No such document!");
-            }
-        }).catch(function(error) {
-            console.log("Error getting document:", error);
-        });
-
+import React, {useState} from 'react';
+const WhoHelp = () => {
+    const [data, setData] = useState({
+        fundacjom: {
+            desc: 'djfsdfjkdjskjfksd',
+            items: [
+                {
+                    header: 'fdfd',
+                    subHeader: 'fdffd',
+                    other: 'dsf'
+                }
+            ]
+        },
+        organizacjom: {
+            desc: 'djfsdfjkdjskjfksd',
+            items: [
+                {
+                    header: '22222222',
+                    subHeader: 'fdffd',
+                    other: 'dsf'
+                }
+            ]
+        }
+    })
+    const [current, setCurrent] = useState('fundacjom')
+    const clickFund = () => {
+        setCurrent('fundacjom');
     }
-    //  const documentsCollection = (doc) => {
-    //      return {id: doc.id, ...doc.data()};
-    //  };
-    const fundElements = datas.map((fundElem, i) =>
-        <li key={i}>{fundElem.name}</li>);
     const clickOrg = () => {
-        //   setCurrent(createOrgs);
+        setCurrent('organizacjom');
     }
     const clickCollections = () => {
-        // setCurrent(createLocalCollections);
+        setCurrent(true);
     }
     return (
         <div id={"whoHelp"} className="who-help-main-container">
@@ -53,12 +42,14 @@ const WhoHelp = (props) => {
                 <button className="who-help-button" onClick={clickCollections}>Lokalnym<br/>zbiórkom</button>
             </div>
             <p className="who-help-description">W naszej bazie znajdziesz listę zweryfikowanych Fundacji,<br/>
-                z którymi współpracujemy. Możesz sprawdzić czym się zajmują,<br/>
-                komu pomagają i czego potrzebują.</p>
+            z którymi współpracujemy. Możesz sprawdzić czym się zajmują,<br/>
+            komu pomagają i czego potrzebują.</p>
 
             <div className="foundations-list">
                 lista fundacji
-                <div>{fundElements}</div>
+                {data[current].items.map(el => (
+                    <li>{el.header}</li>
+                ))}
             </div>
 
         </div>

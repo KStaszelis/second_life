@@ -2,7 +2,7 @@ import React from "react";
 
 const Register = () => {
     return (
-        <p>będzie kurwa rejestracja jak w przychodni!</p>
+        <p>tutaj będzie rejestracja</p>
     );
 };
 

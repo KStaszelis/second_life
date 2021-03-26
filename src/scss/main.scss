@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap');
-@import "./settings/fonts";
+@import "settings/fonts";
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +9,8 @@ body {
   font-family: $font-base, sans-serif;
 }
 
-@import "./components/mainHero";
-@import "./components/threeColumns";
-@import "./components/fourSteps";
+@import "components/mainHero";
+@import "components/threeColumns";
+@import "components/fourSteps";
 @import "components/aboutUs";
-@import "./components/whoHelp";
+@import "components/whoHelp";
